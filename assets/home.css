@@ -1,0 +1,106 @@
+#rightdiv
+{
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 999;
+    background-color: #203f57 ;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#rightdiv.active {
+    width: 280px;
+}
+
+
+#picdiv
+{
+    background-color: #ef403d;
+}
+
+#std_img
+{
+    height: 80px;
+}
+
+#icons a
+{
+    color: #ecf4fc;
+}
+
+#icons a:hover
+{
+    color: #f87d7d;
+}
+
+
+/* For Left Div  */
+#leftdiv
+{
+    width: calc(100% - 280px);
+    position: absolute;
+    top: auto;
+    left: 280px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+#subjt
+{
+    /* color: #2c157e ; */
+    color: #136d43 ;
+}
+#tahhe
+{
+    background-color: #d44745;
+    /* background-color: #203f57; */
+}
+
+table.table-hover tbody tr:hover {
+    background-color: #198754 !important; 
+    color: #ffffff !important;
+}
+
+
+@media only screen and (max-width: 991px) {
+   
+
+    #rightdiv
+    {
+        width: 0px;
+    }
+    #leftdiv
+    {
+        width: 100%;
+        left: 0;
+
+    }
+
+    #cattog, #brandc
+    {
+        display: none;
+    }
+
+}
+
+#overlay 
+{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#overlay.active 
+{
+    display: block;
+    opacity: 1;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="csshome" />
+    <link rel="shortcut icon" type="image/png" href="favicon" />
+    <style>
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+
+    <title>Zeraki Student Portal</title>
+</head>
+
+<body>
+    <!-- Start of the right div -->
+
+    <div id="rightdiv">
+        <div id="innr">
+            <div class="p-2 pl-5 d-block d-lg-none">
+                <button class="btn text-white" id="closebnt">
+                    <i class="fa fa-times" aria-hidden="true"></i> Close
+                </button>
+            </div>
+            <div id="picdiv" class="container-fluid">
+                <div class="row pt-3 pb-1">
+                    <div class="col-4">
+                        <img src="" alt="img" class="img-fluid rounded-circle" id="std_img" />
+                    </div>
+                    <div class="col-8">
+                        <h5 class="font-weight-normal" id="std_name"></h5>
+                        <h6 class="font-weight-normal small">ID: <span id="stdid"></span></h6>
+                        <p class="small">Form: <span id="std_level"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="icons" class="container-fluid">
+                <div class="p-2"></div>
+                <a href="#">
+                    <div class="row pt-4">
+                        <div class="col-2">
+                            <h5> <i class="fa fa-envelope-open" aria-hidden="true"></i> </h5>
+                        </div>
+                        <div class="col-10">
+                            <h6 class="font-weight-normal">Progress Report</h6>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="row pt-4">
+                        <div class="col-2">
+                            <h5> <i class="fa fa-calendar" aria-hidden="true"></i> </h5>
+                        </div>
+                        <div class="col-10">
+                            <h6 class="font-weight-normal">School Calender</h6>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="row pt-4">
+                        <div class="col-2">
+                            <h5><i class="fa fa-line-chart" aria-hidden="true"></i></h5>
+                        </div>
+                        <div class="col-10">
+                            <h6 class="font-weight-normal">Statistics </h6>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- End of the right div   -->
+
+    <!-- Start of the left div -->
+    <div id="leftdiv">
+        <div class="container-fluid">
+            <!-- start of show btn  -->
+            <div class="p-2 d-block d-lg-none">
+                <button class="btn text-" id="brisidebtn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- end of show btn  -->
+            <div class="py-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><span id="examclass"></span></a></li>
+                        <li class="breadcrumb-item"><a href="#"><span id="examyearterm"></span></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><span id="examcat"></span></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="p-3 ">
+                <h4 class="font-weight-normal text-success">
+                    <span id="stndmm"></span>'s
+                    <span id="stdexaman"></span> Report
+                </h4>
+            </div>
+            <div id="ovarllper">
+                <div class="pt-3 pb-2 px-3 bg-light rounded-pill">
+                    <h6 class="font-weight-normal text-primary">
+                        Overall Performance
+                    </h6>
+                </div>
+                <div class="p-3">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p>Mean Grade: &nbsp;&nbsp; <span id="catgrade"></span></p>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Average Score: &nbsp;&nbsp; <span id="avgmarks"></span>
+                                &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p>
+                                Stream Position: &nbsp;&nbsp; <span id="strmpos"></span> / <span id="strmpop"></span>
+                                &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <div class="col-md-7">
+
+                            <p>
+                                Overall Position: &nbsp;&nbsp; <span id="overpos"></span> / <span id="overpop"></span>
+                                &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-arrow-down text-danger" aria-hidden="true"></i>
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="subperfo" class="pt-5">
+                <div class="pt-3 pb-2 px-3 bg-light rounded-pill">
+                    <h6 class="font-weight-normal text-primary">
+                        Performance By Subject
+                    </h6>
+                </div>
+                <div class="p-3">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr class=" text-white" id="tahhe">
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Grade</th>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Deviation</th>
+                                    <th scope="col">Comment</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablecont">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="statistical" class="pt-5 pb-3">
+                <div class="pt-3 pb-2 px-3 bg-light rounded-pill">
+                    <h6 class="font-weight-normal text-primary">
+                        Statistical Analysis
+                    </h6>
+                </div>
+                <div id="ms">
+                    <div class="row">
+                        <div class="col-xxl-6 ">
+                            <canvas id="datgraph1" height="280px"></canvas>
+                        </div>
+                        <div class="col-xxl-6">
+                            <canvas id="datgraph2" height="280px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="offremak" class="py-5">
+                <div class="pt-3 pb-2 px-3 bg-light rounded-pill">
+                    <h6 class="font-weight-normal text-primary">
+                        Official Remarks
+                    </h6>
+
+                </div>
+                <div class="p-3">
+                    <p>
+                        Class Teacher's Remarks: &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i><span id="clasteacher" class="text-success"></span></i>
+                    </p>
+                    <p>
+                        Principal's Remarks: &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i><span id="prinpal" class="text-success"></span></i>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End of the left div   -->
+
+    <div id="overlay"></div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/a0e6427a8e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!-- Fetching data Api -->
+    <script src="script1"></script>
+    <script>
+        document.getElementById("brisidebtn").addEventListener("click", () => {
+            let myrightdiv = document.getElementById("rightdiv");
+            let myoverlay = document.getElementById("overlay");
+            myrightdiv.classList.toggle("active");
+            myoverlay.classList.toggle("active");
+        })
+        document.getElementById("closebnt").addEventListener("click", () => {
+            let myrightdiv = document.getElementById("rightdiv");
+            let myoverlay = document.getElementById("overlay");
+            myrightdiv.classList.toggle("active");
+            myoverlay.classList.toggle("active");
+        })
+        document.getElementById("overlay").addEventListener("click", () => {
+            let myrightdiv = document.getElementById("rightdiv");
+            let myoverlay = document.getElementById("overlay");
+            myrightdiv.classList.toggle("active");
+            myoverlay.classList.toggle("active");
+        })
+    </script>
+
+
+</body>
+
+</html>
